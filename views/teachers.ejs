@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Teachers</title>
   <!-- Link to the correct css file -->
-  <link rel="stylesheet" href="..." />
+  <link rel="stylesheet" href="teachers.css" />
   <!-- Link to the correct js file -->
-  <script src="..." defer></script>
+  <script src="teacherScript.js" defer></script>
 </head>
 <body>
   <nav class="navbar">
@@ -16,9 +16,9 @@
     </div>
     <div class="nav-links">
       <!-- Link to the route for home -->
-      <a href="...">Teachers</a>
+      <a href="/">Teachers</a>
       <!-- Link to the route for ratings and comments -->
-      <a href="...">Comments & Ratings</a>
+      <a href="/ratings">Comments & Ratings</a>
     </div>
   </nav>
 
@@ -28,7 +28,12 @@
     <div class="form-section">
       <h2>Add a New Teacher</h2>
       <!-- Create a form below that matches the Teacher schema -->
-
+      <form action="/teachers" method="POST">
+        <label>Name: <input type="text" name="name" required /></label><br />
+        <label>Department: <input type="text" name="department" required /></label><br />
+        <label>Image URL: <input type="text" name="image" required /></label><br />
+        <button type="submit">Add Teacher</button>
+      </form>
 
 
       
