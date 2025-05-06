@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ratings</title>
   <!-- Link to the correct css file -->
-  <link rel="stylesheet" href="..." />
+  <link rel="stylesheet" href="/ratings.css" />
   <!-- Link to the correct js file -->
-  <script src="..." defer></script>
+  <script src="/ratingScript.js" defer></script>
 </head>
 <body>
   <nav class="navbar">
@@ -16,9 +16,9 @@
     </div>
     <div class="nav-links">
       <!-- Link to the route for home -->
-      <a href="...">Teachers</a>
+      <a href="/">Teachers</a>
       <!-- Link to the route for ratings and comments -->
-      <a href="...">Comments & Ratings</a>
+      <a href="/ratings">Comments & Ratings</a>
     </div>
   </nav>
 
@@ -30,9 +30,22 @@
 
       <!-- Create a form below that matches the Ratings schema -->
       <!-- Inside of the input tag for rating add the attributes min="1" max="5" -->
-      
+      <form>
+        <label for="username">Your Name</label>
+        <input type="text" name="username" id="username" required />
 
+        <label for="teacher">Teacher Name</label>
+        <input type="text" name="teacher" id="teacher" required />
 
+        <label for="comment">Comment</label>
+        <input type="text" name="comment" id="comment" required />
+    
+         <label for="rating">Rating (1 to 5)</label>
+         <input type="number" name="rating" id="rating" min="1" max="5" required />
+
+        <button type="submit">Submit Rating</button>
+      </form>
+    
       
     </div>
 
